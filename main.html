@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AC Milan</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Pretendard:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#000;
+    color:#fff;
+    font-family:'Pretendard', sans-serif;
+}
+
+:root{
+    --red:#CB0A0A;
+    --black:#000000;
+    --white:#ffffff;
+}
+
+header{
+    position:fixed;
+    position:relative;
+    top: 0;
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,.6);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+
+/* 
+.logo{
+    left:180px;
+    position:absolute;
+    font-family:'Anton', sans-serif;
+    color:var(--red);
+    font-size:2rem;
+    letter-spacing:2px;
+} */
+.logo { 
+    position: relative;
+    font-family: 'Anton', sans-serif;
+    font-size: 1.5rem;
+}
+.logoimage{
+    position:absolute;
+    top:5px;
+    left:95px;
+    border-radius:50%;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--red);
+}
+
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.7)),
+    url("https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1600");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    padding:0 8%;
+}
+
+.hero-content h1{
+    font-family:'Anton', sans-serif;
+    font-size:7rem;
+    line-height:1;
+    color:white;
+}
+
+.hero-content span{
+    color:var(--red);
+}
+
+.hero-content p{
+    margin-top:20px;
+    font-size:1.2rem;
+    max-width:600px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:15px 35px;
+    background:var(--red);
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.section{
+    padding:120px 8%;
+}
+
+.section-title{
+    font-family:'Anton', sans-serif;
+    font-size:4rem;
+    margin-bottom:60px;
+    border-left:6px solid var(--red);
+    padding-left:20px;
+}
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about img{
+    width:100%;
+}
+
+.players{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    position:relative;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.card img{
+    width:100%;
+    height:400px;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.card:hover img{
+    transform:scale(1.1);
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(203,10,10,.9);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    opacity:0;
+    transition:.4s;
+}
+
+.card:hover .overlay{
+    opacity:1;
+}
+
+.overlay h3{
+    font-size:2rem;
+    margin-bottom:10px;
+}
+
+.news{
+    display:grid;
+    gap:20px;
+}
+
+.news-item{
+    border:1px solid #333;
+    padding:30px;
+    transition:.3s;
+}
+
+.news-item:hover{
+    border-color:var(--red);
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    border-top:1px solid #222;
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+    font-size:4rem;
+}
+
+.about{
+    grid-template-columns:1fr;
+}
+
+.section-title{
+    font-size:2.5rem;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">AC MILAN</div> <img class=logoimage src="logo22.webp" width="70px" height="70px">
+    
+    <nav>
+        <ul>
+            <li class="active"><a href="#about">Club</a></li>
+            <li class="active"><a href="#players">Players</a></li>
+            <li class="active"><a href="#news">News</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>PASSION<br><span>& GLORY</span></h1>
+
+        <p>
+            전통과 품격, 그리고 열정을 가진 축구 클럽.
+            AC 밀란의 역사와 감성을 경험하세요.
+        </p>
+
+        <a href="#about" class="btn">EXPLORE</a>
+    </div>
+</section>
+
+<section class="section" id="about">
+
+    <h2 class="section-title">IDENTITY</h2>
+
+    <div class="about">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Logo_of_AC_Milan.svg">
+
+        <div>
+            <h3>Dark & Elegant</h3>
+            <br>
+            <p>
+                AC 밀란은 축구를 넘어 밀라노의 문화와 전통,
+                열정을 상징하는 브랜드입니다.
+            </p>
+
+            <br>
+
+            <p>
+                강렬한 Red와 Black 컬러,
+                미니멀한 UI를 통해 클럽의 품격을 표현합니다.
+            </p>
+        </div>
+    </div>
+
+</section>
+
+<section class="section" id="players">
+
+    <h2 class="section-title">PLAYERS</h2>
+
+    <div class="players">
+
+        <div class="card">
+            <img src="https://picsum.photos/500/700?1">
+            <div class="overlay">
+                <h3>PLAYER</h3>
+                <p>Forward</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/500/700?2">
+            <div class="overlay">
+                <h3>PLAYER</h3>
+                <p>Midfielder</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://picsum.photos/500/700?3">
+            <div class="overlay">
+                <h3>PLAYER</h3>
+                <p>Defender</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section" id="news">
+
+    <h2 class="section-title">LATEST NEWS</h2>
+
+    <div class="news">
+
+        <div class="news-item">
+            AC Milan 경기 일정 및 결과
+        </div>
+
+        <div class="news-item">
+            선수 인터뷰 및 클럽 소식
+        </div>
+
+        <div class="news-item">
+            공식 유니폼 및 굿즈 정보
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2025 AC Milan Fan Website
+</footer>
+
+</body>
+</html>
