@@ -31,7 +31,11 @@ header{
     z-index:1000;
 }
 
-
+.play{
+    width:100%;
+    height:1080px;
+    background:#fff;
+}
 /* 
 .logo{
     left:180px;
@@ -41,16 +45,21 @@ header{
     font-size:2rem;
     letter-spacing:2px;
 } */
+.logo-wrap {
+    display: flex;
+    align-items: center;
+     /* Adjust the gap as needed */
+    
+}
 .logo { 
     position: relative;
     font-family: 'Anton', sans-serif;
     font-size: 1.5rem;
 }
 .logoimage{
-    position:absolute;
-    top:5px;
-    left:95px;
-    border-radius:50%;
+    display: flex;
+  
+  
 }
 
 nav ul{
