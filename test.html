@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="loadData()">테스트</button>
+
+<script>
+function loadData(){
+
+fetch("https://api.football-data.org/v4/competitions/SA/standings",{
+headers:{
+"X-Auth-Token":"b654c58de8c045b8b221d39340b57bb2"
+}
+})
+.then(res=>res.json())
+.then(data=>{
+console.log(data);
+alert("성공");
+})
+.catch(err=>{
+console.error(err);
+alert("실패");
+});
+
+}
+</script>
+
+</body>
+</html>
